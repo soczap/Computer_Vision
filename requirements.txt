@@ -1,0 +1,26 @@
+# VIGIL backend. Install torch/torchvision first from the CUDA index matching your GPU, e.g.:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130
+# onnxruntime-gpu for aarch64 + CUDA 13 (DGX Spark): --extra-index-url https://pypi.jetson-ai-lab.io/sbsa/cu130
+fastapi==0.141.1
+uvicorn[standard]==0.54.0
+SQLAlchemy[asyncio]==2.1.1
+aiosqlite==0.22.1
+pydantic==2.13.5
+pydantic-settings==2.15.0
+PyJWT==2.15.0
+httpx==0.28.1
+python-multipart
+prometheus-client==0.26.0
+numpy
+opencv-python-headless
+av==18.1.0
+ultralytics==8.4.163
+lap==0.5.13
+onnxruntime-gpu==1.24.0
+transformers==5.17.0
+safetensors
+huggingface_hub
+open_clip_torch==3.3.0
+websockets
+pytest
+pytest-asyncio

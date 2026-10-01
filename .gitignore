@@ -1,0 +1,20 @@
+# Runtime data: database, face images, evidence, uploads, admin credentials, JWT secret, logs
+data/
+# TLS private key + cert (generate per deployment: see docs/OPERATIONS.md)
+certs/
+# Local configuration (copy .env.example)
+.env
+# Model weights (large; scripts/fetch_models.py downloads them)
+models/
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Frontend
+frontend/node_modules/
+frontend/dist/
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

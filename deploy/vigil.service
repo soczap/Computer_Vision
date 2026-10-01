@@ -1,0 +1,19 @@
+[Unit]
+Description=VIGIL Video Analytics (agentic video intelligence; integrates read-only with FRS on :8000)
+After=network-online.target frs.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/vajra/video_analytics
+ExecStart=/home/vajra/video_analytics/.venv/bin/python -m vigil.main
+Restart=always
+RestartSec=5
+# One process only: tracks, galleries and live channels are process-local.
+Environment=PYTHONUNBUFFERED=1
+StandardOutput=append:/home/vajra/video_analytics/data/logs/service.out
+StandardError=append:/home/vajra/video_analytics/data/logs/service.out
+TimeoutStopSec=20
+
+[Install]
+WantedBy=default.target
